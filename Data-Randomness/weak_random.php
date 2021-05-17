@@ -4,36 +4,17 @@
 	$count =0;
 	$min=0;
 	$max=10;
-	$random_numbers=array();
-	//fill the array with random numbers
-	for($i=0; $i<$max; $i++)
-		{
-			$random=rand($min, $max);
-			$random_numbers[$i]= $random;
-		}
+	$random_number=rand($min, $max);
 	$match=false;
 	
 	do{
-		for($i =0; $i< count($random_numbers);$i++)
+		$random=rand($min, $max);
+		$count++;
+		if( $random==$random_number)
 		{
-			$current_number=$random_numbers[$i];
-			for( $j=0; $j<count($random_numbers);$j++)
-			{
-				if(!$i==$j)
-				{
-					if($current_number==$random_numbers[$j])
-					{
-						
-						$match=true;
-					}
-					else
-					{
-						$count++;
-					}
-				}
-			}
-			
+			$match=true;
 		}
+		
 	}while($match==false);
 	echo "Number Repeated after: ";
 	echo $count;

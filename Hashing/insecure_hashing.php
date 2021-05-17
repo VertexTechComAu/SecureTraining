@@ -1,7 +1,7 @@
 <html>
 <body>
 <?php 
-echo "<p>Weakly Storage Password is : ";
+echo "<p>Weak Storage Methods of Passwords are : ";
 $target = $_POST["md"];
 echo "<br>1. Plain Text: ";
 echo $target;
