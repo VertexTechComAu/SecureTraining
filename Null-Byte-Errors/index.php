@@ -3,7 +3,11 @@
     <title>PHP Test</title>
   </head>
   <body> 
-  <a href="unsafe.php?file="test.php"> Get Test.php using unsafe code.</a> <br><br>
-  <a href="safe.php?file="test.php"> Get Test.php using safe code</a>
+  <form action="unsafe.php" method="get">
+  Enter filename : <input type="text" name="file"><br>
+  <input type="submit" name="Unsafe Code!"><br>
+  <form action="safe.php" method="get">  
+  Enter filename : <input type="text" name="file"><br>
+  <input type="submit" name="Safe Code!"><br>
   </body>
 </html>

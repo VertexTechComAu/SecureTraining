@@ -4,7 +4,7 @@
   </head>
   <body> 
   <?php 
-  $file = $_GET['file'];
+  $file = $_GET['file']."php";
   $clean =  str_replace(chr(0),"",$file);
    echo file_get_contents("$clean");
    echo "I am the SAFE code!";
