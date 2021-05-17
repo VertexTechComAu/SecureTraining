@@ -12,8 +12,6 @@
 			$random_numbers[$i]= $random;
 		}
 	$match=false;
-	
-	do{
 		for($i =0; $i< count($random_numbers);$i++)
 		{
 			$current_number=$random_numbers[$i];
@@ -33,10 +31,15 @@
 			}
 			
 		}
-	}while($match==false);
-	echo "Number Using Rand() Repeated after: ";
-	echo $count;
-	
+		if ($match==true)
+		{
+			echo "Number Using Rand() Repeated after: ";
+			echo $count;
+		}
+		else
+		{
+		 	echo "Number using rand() did NOT repeat";
+		 }
 	$count_s =0;
 	$random_numbers_s=array();
 	//fill the array with random numbers
@@ -47,8 +50,7 @@
 		}
 	$match_s=false;
 	
-	do{
-		for($i =0; $i< count($random_numbers_s);$i++)
+	for($i =0; $i< count($random_numbers_s);$i++)
 		{
 			$current_number=$random_numbers_s[$i];
 			for( $j=0; $j<count($random_numbers_s);$j++)
@@ -67,9 +69,15 @@
 			}
 			
 		}
-	}while($match_s==false);
+		if ($match==true){
 	echo "<br>Number Using Random_Int Repeated after: ";
-	echo $count;
+	echo $count_s;
+	}
+	else
+		{
+		 	echo "<br> Number using random_int() did NOT repeat";
+		 }
+	
 	
 ?>
 </body>
