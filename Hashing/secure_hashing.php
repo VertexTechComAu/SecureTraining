@@ -5,7 +5,7 @@ echo "<p>Weakly Encrypted Text is:   ";
 $target = $_POST["sha"];
 $password = "MyPassword!1!";
 $aes256key = hash("SHA256", $password, true); 
-$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CBC);
+$size = mcrypt_get_iv_size(MCRYPT_CAST_256, MCRYPT_MODE_CBC);
 $iv = mcrypt_create_iv($size, MCRYPT_DEV_RANDOM);
 $mcrypted=mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $aes256key, $target, MCRYPT_MODE_CBC);
 echo base64_encode($mcrypted); 
