@@ -2,9 +2,9 @@
 <body>
 <?php
 $servername = "localhost";
-$username = "learning_user##";
+$username = "learning_user16";
 $password = "dT6w8kdovv!mEeaM33";
-$dbname = "db##";
+$dbname = "db16";
 
 // Create connection
 $db = new mysqli($servername, $username, $password, $dbname);
@@ -18,19 +18,12 @@ ID:
 <?php
 $user_id =$_POST["id"];
 echo $user_id; 
-?><br>
+?>
+<br>
 <?php
 $sql = $db->query("SELECT * FROM users WHERE id = ".$user_id);
-if ($sql->num_rows > 0) {
-  //output data of each row
-  while($row = $result->fetch_assoc()) {
-   echo "id: " . $row["id"]. " - Name: " . $row["firstname"]." - Lastname: ". $row["surname"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
+echo $sql;
 $conn->close();
-  
 ?>
 </body>
 </html>
