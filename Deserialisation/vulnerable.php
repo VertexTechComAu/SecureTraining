@@ -1,5 +1,5 @@
 <?php
-ini_set('display_error','Off');
+ini_set('display_errors','Off');
 class Data
 {
   var $guess;

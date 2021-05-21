@@ -4,8 +4,8 @@
   </head>
   <body> 
   <form action="code.php" method="get">
-  Enter code : <input type="text" name="code"><br>
-  <input type="submit" name=" Run Code"><br>
+  Enter IP to ping: <input type="text" name="ip"><br>
+  <input type="submit" value="Ping"><br>
   </form>
   </form>
   </body>
