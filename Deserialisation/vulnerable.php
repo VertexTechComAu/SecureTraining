@@ -1,11 +1,12 @@
 <?php
+ini_set('display_error','Off');
 class Data
 {
   var $guess;
   var $secretCode;
 }
 
-$obj = unserialize($_GET['decode']);
+$obj = unserialize($_GET['data']);
 if($obj) {
     $obj->secretCode = rand(500000,999999);
     if($obj->guess === $obj->secretCode) {

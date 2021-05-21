@@ -1,4 +1,7 @@
 <?php
-$code=$_GET['code'];
-eval("\$code;");
+$ip=$_GET['ip'];
+echo '<pre>';
+exec("ping -c 4 ".$ip, $retval);
+print_r($retvel);
+echo '<pre>';
 ?>
