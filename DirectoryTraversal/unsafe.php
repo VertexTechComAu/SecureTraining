@@ -1,3 +1,3 @@
 <?php 
-   echo include($_GET['file']);
+   echo get_file_contents($_GET['file']);
    ?>

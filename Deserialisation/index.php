@@ -10,6 +10,7 @@
   </form>
   <form action="vulnerable.php" method="get">
   Data to send: <input type="text" name="data">
+  <input type="submit">
      </form>
   </body>
 </html>

@@ -9,7 +9,10 @@ $obj = unserialize($_GET['decode']);
 if($obj) {
     $obj->secretCode = rand(500000,999999);
     if($obj->guess === $obj->secretCode) {
-        echo "Win";
+        echo "You Hacked Me";
+    }
+    else {
+    echo "You could not hack me!";
     }
 }
 ?>
