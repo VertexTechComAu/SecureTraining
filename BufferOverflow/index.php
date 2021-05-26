@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-
-<form action="upload.php" method="post" enctype="multipart/form-data">
-  Select image to upload:
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
-</form>
-
+<?php
+$roles = array("Admin", "Manager", "User");
+?>
+<h3> User Roles in the array are:<h3><br>
+<ul>
+	<li><?php echo $roles[0];?></li>
+	<li><?php echo $roles[1];?></li>
+	<li><?php echo $roles[2];?></li>
+	<li><?php echo $roles[3];?></li>
+</ul>
 </body>
 </html>
