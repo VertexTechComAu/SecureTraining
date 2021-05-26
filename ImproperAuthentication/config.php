@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--?php
 	define("HOST","localhost");
 	define("DB_PASS","");
@@ -11,6 +12,15 @@
 	{
 		die(mysqli_error());
 	}
+=======
+<?php
+/* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'learning_user##');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'db##');
+>>>>>>> 2845ee742e69e88bb793970d8c31d408af0e2d3b
  
 functiongetUserAccessRoleByID($id)
 {
