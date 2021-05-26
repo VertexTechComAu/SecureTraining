@@ -39,7 +39,7 @@
 </html>
 <?php
 // Include config file
-require_once "config.php";
+require_once "../config.php";
 $username=$_POST["username"];
 $password=$_POST["password"];
 $link->query("INSERT INTO users (username, password)
