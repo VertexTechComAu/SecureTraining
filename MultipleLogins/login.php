@@ -51,12 +51,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
-                            
+                            $token=getToken(10);
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                            
+                            $_SESSION["username"] = $username;     
+                            $_SESSION["token"]=$token;                       
+                            $tokens=$link->query("select * from user_tokens where id=".$id);
+                            $row_tokens=$tokens->fetch_assoc();
+                            if($row_tokens >0){
+                             $link->query("update user_tokens set token='".$token."' where id='".$id);
+                            }
+                            else{
+                            $link->query("insert into user_token (id,token) values('".$token."','".$id."')");
+                            }
                             // Redirect user to welcome page
                             header("location: welcome.php");
                         } else{
@@ -79,6 +87,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Close connection
     mysqli_close($link);
+}
+// Generate token
+function getToken($length){
+  $token = "";
+  $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  $codeAlphabet.= "abcdefghijklmnopqrstuvwxyz";
+  $codeAlphabet.= "0123456789";
+  $max = strlen($codeAlphabet); // edited
+
+  for ($i=0; $i < $length; $i++) {
+    $token .= $codeAlphabet[random_int(0, $max-1)];
+  }
+
+  return $token;
 }
 ?>
  
