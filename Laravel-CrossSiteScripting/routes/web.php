@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/contact', 'ContactController@contact')->name('contact');
-Route::post('/contact', 'ContactController@contactPost') ->name('contactPost');
-?>
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/blog',[\App\Http\Controllers\BolgPostController::class,'index']);

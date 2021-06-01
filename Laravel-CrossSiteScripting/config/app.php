@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://learning.vertexcybersecurity.com.au/name3/SecureTraining/Laravel-CrossSiteScripting/'),
 
     'asset_url' => env('ASSET_URL', null),
 

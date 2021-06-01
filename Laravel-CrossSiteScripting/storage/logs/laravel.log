@@ -1,0 +1,187 @@
+[2021-05-31 23:57:35] local.ERROR: Command "server" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"server\" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve at /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php:678)
+[stacktrace]
+#0 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(255): Symfony\\Component\\Console\\Application->find()
+#1 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#2 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Application.php(92): Symfony\\Component\\Console\\Application->run()
+#3 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#4 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
+[2021-06-01 00:08:28] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists (SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `email_verified_at` timestamp null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists (SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `email_verified_at` timestamp null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php:685)
+[stacktrace]
+#0 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(645): Illuminate\\Database\\Connection->runQueryCallback()
+#1 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(479): Illuminate\\Database\\Connection->run()
+#2 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement()
+#3 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(365): Illuminate\\Database\\Schema\\Blueprint->build()
+#4 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(228): Illuminate\\Database\\Schema\\Builder->build()
+#5 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create()
+#6 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/database/migrations/2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(393): CreateUsersTable->up()
+#8 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(402): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(201): Illuminate\\Database\\Migrations\\Migrator->runMigration()
+#10 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(166): Illuminate\\Database\\Migrations\\Migrator->runUp()
+#11 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending()
+#12 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run()
+#13 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(578): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#14 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#15 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#18 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#19 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/Container.php(614): Illuminate\\Container\\BoundMethod::call()
+#20 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#21 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Command/Command.php(288): Illuminate\\Console\\Command->execute()
+#22 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#23 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(974): Illuminate\\Console\\Command->run()
+#24 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(291): Symfony\\Component\\Console\\Application->doRunCommand()
+#25 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#26 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Application.php(92): Symfony\\Component\\Console\\Application->run()
+#27 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#28 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists at /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php:478)
+[stacktrace]
+#0 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(478): PDOStatement->execute()
+#1 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(678): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(645): Illuminate\\Database\\Connection->runQueryCallback()
+#3 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(479): Illuminate\\Database\\Connection->run()
+#4 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement()
+#5 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(365): Illuminate\\Database\\Schema\\Blueprint->build()
+#6 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(228): Illuminate\\Database\\Schema\\Builder->build()
+#7 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create()
+#8 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/database/migrations/2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#9 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(393): CreateUsersTable->up()
+#10 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(402): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(201): Illuminate\\Database\\Migrations\\Migrator->runMigration()
+#12 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(166): Illuminate\\Database\\Migrations\\Migrator->runUp()
+#13 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending()
+#14 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run()
+#15 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(578): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#16 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#17 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#20 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#21 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/Container.php(614): Illuminate\\Container\\BoundMethod::call()
+#22 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#23 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Command/Command.php(288): Illuminate\\Console\\Command->execute()
+#24 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#25 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(974): Illuminate\\Console\\Command->run()
+#26 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(291): Symfony\\Component\\Console\\Application->doRunCommand()
+#27 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#28 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Application.php(92): Symfony\\Component\\Console\\Application->run()
+#29 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#30 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#31 {main}
+"} 
+[2021-06-01 00:08:59] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'blog_posts' already exists (SQL: create table `blog_posts` (`id` bigint unsigned not null auto_increment primary key, `title` text not null, `body` text not null, `user_id` text not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'blog_posts' already exists (SQL: create table `blog_posts` (`id` bigint unsigned not null auto_increment primary key, `title` text not null, `body` text not null, `user_id` text not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php:685)
+[stacktrace]
+#0 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(645): Illuminate\\Database\\Connection->runQueryCallback()
+#1 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(479): Illuminate\\Database\\Connection->run()
+#2 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement()
+#3 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(365): Illuminate\\Database\\Schema\\Blueprint->build()
+#4 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(228): Illuminate\\Database\\Schema\\Builder->build()
+#5 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create()
+#6 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/database/migrations/2021_06_01_000542_create_blog_posts_table.php(22): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(393): CreateBlogPostsTable->up()
+#8 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(402): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(201): Illuminate\\Database\\Migrations\\Migrator->runMigration()
+#10 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(166): Illuminate\\Database\\Migrations\\Migrator->runUp()
+#11 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending()
+#12 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run()
+#13 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(578): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#14 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#15 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#18 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#19 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/Container.php(614): Illuminate\\Container\\BoundMethod::call()
+#20 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#21 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Command/Command.php(288): Illuminate\\Console\\Command->execute()
+#22 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#23 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(974): Illuminate\\Console\\Command->run()
+#24 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(291): Symfony\\Component\\Console\\Application->doRunCommand()
+#25 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#26 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Application.php(92): Symfony\\Component\\Console\\Application->run()
+#27 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#28 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'blog_posts' already exists at /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php:478)
+[stacktrace]
+#0 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(478): PDOStatement->execute()
+#1 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(678): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(645): Illuminate\\Database\\Connection->runQueryCallback()
+#3 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Connection.php(479): Illuminate\\Database\\Connection->run()
+#4 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement()
+#5 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(365): Illuminate\\Database\\Schema\\Blueprint->build()
+#6 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(228): Illuminate\\Database\\Schema\\Builder->build()
+#7 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create()
+#8 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/database/migrations/2021_06_01_000542_create_blog_posts_table.php(22): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#9 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(393): CreateBlogPostsTable->up()
+#10 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(402): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(201): Illuminate\\Database\\Migrations\\Migrator->runMigration()
+#12 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(166): Illuminate\\Database\\Migrations\\Migrator->runUp()
+#13 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending()
+#14 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run()
+#15 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(578): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#16 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#17 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#20 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#21 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Container/Container.php(614): Illuminate\\Container\\BoundMethod::call()
+#22 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#23 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Command/Command.php(288): Illuminate\\Console\\Command->execute()
+#24 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#25 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(974): Illuminate\\Console\\Command->run()
+#26 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(291): Symfony\\Component\\Console\\Application->doRunCommand()
+#27 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#28 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Application.php(92): Symfony\\Component\\Console\\Application->run()
+#29 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#30 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#31 {main}
+"} 
+[2021-06-01 00:19:50] local.ERROR: Command "server" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"server\" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve at /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php:678)
+[stacktrace]
+#0 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(255): Symfony\\Component\\Console\\Application->find()
+#1 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#2 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Application.php(92): Symfony\\Component\\Console\\Application->run()
+#3 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#4 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
+[2021-06-01 00:34:12] local.ERROR: Command "config" is not defined.
+
+Did you mean one of these?
+    config:cache
+    config:clear {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"config\" is not defined.
+
+Did you mean one of these?
+    config:cache
+    config:clear at /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php:678)
+[stacktrace]
+#0 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(255): Symfony\\Component\\Console\\Application->find()
+#1 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#2 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Console/Application.php(92): Symfony\\Component\\Console\\Application->run()
+#3 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#4 /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
