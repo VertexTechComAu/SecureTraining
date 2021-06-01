@@ -36,4 +36,4 @@
         </div>
     </body>
 </html>
-<?php /**PATH /home/jay/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/views/minimal.blade.php ENDPATH**/ ?>
+<?php /**PATH /www/public/name3/SecureTraining/Laravel-CrossSiteScripting/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/views/minimal.blade.php ENDPATH**/ ?>
