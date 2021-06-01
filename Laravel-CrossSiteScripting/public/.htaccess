@@ -4,7 +4,8 @@
     </IfModule>
 
     RewriteEngine On
-    RewriteBase /SecureTraining/name3/Laravel-CrossSiteScripting/public/	
+    #RewriteBase /SecureTraining/name3/Laravel-CrossSiteScripting/public/
+	
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
