@@ -19,11 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 //Route::resource('blog',BlogPostController::class);
-Route::get('/blog',[BlogPostController::class,'index']);
-Route::get('/blog/{blogPost}',[BlogPostController::class,'show']);
-Route::get('/blog/create/post',[BlogPostController::class,'create']);
-Route::post('/blog/create/post',[BlogPostController::class,'store']);
-Route::get('/blog/{blogPost}/edit',[BlogPostController::class,'edit']);
-Route::put('/blog/{blogPost}/edit',[BlogPostController::class,'update']);
-Route::delete('/blog/{blogPost}',[BlogPostController::class,'delete']);
+Route::get('/blog',[BlogPostController::class,'index'])->name('blogs');
+Route::get('/blog/{blogPost}',[BlogPostController::class,'show'])->name('displayBlog');
+Route::get('/blog/create/post',[BlogPostController::class,'create'])->name('createPost');
+Route::post('/blog/create/post',[BlogPostController::class,'store'])->name('create');
+Route::get('/blog/{blogPost}/edit',[BlogPostController::class,'edit'])->name('editPost');
+Route::put('/blog/{blogPost}/edit',[BlogPostController::class,'update'])->name('updatePost');
+Route::delete('/blog/{blogPost}',[BlogPostController::class,'destroy'])->name('delete');
 

@@ -10,12 +10,12 @@
                     </div>
                     <div class="col-4">
                         <p>Create new Post</p>
-                        <a href="./create/post" class="btn btn-primary btn-sm">Add Post</a>
+                        <a href="{{ route('create')}}" class="btn btn-primary btn-sm">Add Post</a>
                     </div>
                 </div>                
                 @forelse($posts as $post)
                     <ul>
-                        <li><a href="./{{ $post->id }}">{{ ucfirst($post->title) }}</a></li>
+                        <li><a href="{{route('displayBlog',[$post->id]) }}">{{ ucfirst($post->title) }}</a></li>
                     </ul>
                 @empty
                     <p class="text-warning">No blog Posts available</p>
