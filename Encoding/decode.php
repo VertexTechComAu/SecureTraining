@@ -1,13 +1,13 @@
 <html>
 <body>
-Encoded Text is : 
-<?php 
+Decoded Text is :
+<?php
 $target=$_POST["decode"];
 //change code here
 
 
 $target=base64_decode($target);
-echo $target; 
+echo $target;
 ?>
 
 </body>

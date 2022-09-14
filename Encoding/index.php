@@ -8,7 +8,7 @@
   <input type="submit"><br>
   <br>
   </form>
-  <form action="decode.php" method="post">
+  <form action="fixed.php" method="post">
   Text to Decode: <input type="text" name="decode"><br>
   <input type="submit">
   </form>
