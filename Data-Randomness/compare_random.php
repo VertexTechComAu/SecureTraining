@@ -1,84 +1,54 @@
 <html>
 <body>
-<?php 
-	$count =0;
+<?php
 	$min=0;
-	$max=10;
-	$random_numbers=array();
-	//fill the array with random numbers
-	for($i=0; $i<$max; $i++)
-		{
-			$random=rand($min, $max);
-			$random_numbers[$i]= $random;
+	$max=100000000;
+
+	// variables for weak algorithm
+	$random_numbers_weak=array();
+	$match_found_weak = False;
+	$count_weak = 0;
+
+	// weak random number generation
+	// keep looping till random number is repeated
+	while($match_found_weak == False) {
+		$random=rand($min, $max);
+		// check if newly generated number already exists in $random_numbers_weak array
+		if(in_array($random, $random_numbers_weak)) {
+			$match_found_weak = True;
 		}
-	$match=false;
-		for($i =0; $i< count($random_numbers);$i++)
-		{
-			$current_number=$random_numbers[$i];
-			for( $j=0; $j<count($random_numbers);$j++)
-			{
-				if(!$i==$j)
-				{
-					if($current_number==$random_numbers[$j])
-					{
-						$match=true;
-					}
-					else
-					{
-						$count++;
-					}
-				}
-			}
-			
+		else {
+			$count_weak++;
+			array_push($random_numbers_weak, $random);
 		}
-		if ($match==true)
-		{
-			echo "Number Using Rand() Repeated after: ";
-			echo $count;
-		}
-		else
-		{
-		 	echo "Number using rand() did NOT repeat";
-		 }
-	$count_s =0;
-	$random_numbers_s=array();
-	//fill the array with random numbers
-	for($i=0; $i<$max; $i++)
-		{
-			$random=random_int($min, $max);
-			$random_numbers_s[$i]= $random;
-		}
-	$match_s=false;
-	
-	for($i =0; $i< count($random_numbers_s);$i++)
-		{
-			$current_number=$random_numbers_s[$i];
-			for( $j=0; $j<count($random_numbers_s);$j++)
-			{
-				if(!$i==$j)
-				{
-					if($current_number==$random_numbers_s[$j])
-					{
-						$match_s=true;
-					}
-					else
-					{
-						$count_s++;
-					}
-				}
-			}
-			
-		}
-		if ($match==true){
-	echo "<br>Number Using Random_Int Repeated after: ";
-	echo $count_s;
 	}
-	else
-		{
-		 	echo "<br> Number using random_int() did NOT repeat";
-		 }
+
+	echo("Weak algorithm repeated a number after ". $count_weak ." iterations.");
 	
-	
+	echo("<br/>");
+
+	// variables for strong algorithm
+	$random_numbers_strong=array();
+	$match_found_strong = False;
+	$count_strong = 0;
+
+	// strong random number generation
+	// keep looping till random number is repeated
+	while($match_found_strong == False) {
+		$random=random_int($min, $max);
+		// check if newly generated number already exists in $random_numbers_strong array
+		if(in_array($random, $random_numbers_strong)) {
+			$match_found_strong = True;
+		}
+		else {
+			$count_strong++;
+			array_push($random_numbers_strong, $random);
+		}
+	}
+
+	echo("Strong algorithm repeated a number after ". $count_strong ." iterations.");
+
+	echo("Note that due to the small sample size, there is a good chance the weak algorithm may take longer before it generates a repeat number.");
 ?>
 </body>
 </html>

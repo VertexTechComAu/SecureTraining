@@ -1,12 +1,12 @@
 <html>
 <body>
-<?php 
+<?php
 	$count =0;
 	$min=0;
-	$max=10;
+	$max=100000000;
 	$random_number=rand($min, $max);
 	$match=false;
-	
+
 	do{
 		$random=rand($min, $max);
 		$count++;
