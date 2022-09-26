@@ -10,7 +10,7 @@
         do{
                 // use strong encryption algorithm to generate random number between $min and $max (single line of code)
 		// secure functions random_int(), random_bytes() 
-
+		$random=random_int($min, $max);
 		$count++;
                 if( $random==$random_number)
                 {

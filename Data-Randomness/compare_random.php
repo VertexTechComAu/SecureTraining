@@ -2,7 +2,7 @@
 <body>
 <?php
 	$min=0;
-	$max=100000000;
+	$max=100000;
 
 	// variables for weak algorithm
 	$random_numbers_weak=array();
@@ -23,7 +23,7 @@
 		}
 	}
 
-	echo("Weak algorithm repeated a number after ". $count_weak ." iterations.");
+	echo("Weak algorithm repeated a number after ". number_format($count_weak) ." iterations.");
 	
 	echo("<br/>");
 
@@ -46,8 +46,9 @@
 		}
 	}
 
-	echo("Strong algorithm repeated a number after ". $count_strong ." iterations.");
-
+	echo("Strong algorithm repeated a number after ". number_format($count_strong) ." iterations.");
+	
+	echo("<br />");
 	echo("Note that due to the small sample size, there is a good chance the weak algorithm may take longer before it generates a repeat number.");
 ?>
 </body>
