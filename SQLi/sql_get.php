@@ -2,9 +2,9 @@
 <body>
 <?php
 $servername = "localhost";
-$username = "learning_user##";
-$password = "dT6w8kdovv!mEeaM33";
-$dbname = "db##";
+$username = "brenden";
+$password = "";
+$dbname = "db1";
 
 // Create connection
 $db = new mysqli($servername, $username, $password, $dbname);
@@ -13,25 +13,20 @@ $db = new mysqli($servername, $username, $password, $dbname);
 if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }
-?>
-ID:  
-<?php
-$user_id =$_POST["id"];
-echo $user_id; 
-?><br>
-<?php
+
+$user_id =$_GET["id"];
 $sql = $db->query("SELECT * FROM users WHERE id = ".$user_id);
+
 if ($sql->num_rows > 0) {
   //output data of each row
-  while($row = $result->fetch_assoc()) {
-   echo "id: " . $row["id"]. " - Name: " . $row["firstname"]." - Lastname: ". $row["surname"]. "<br>";
-  }
+  while($row = $sql->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]." - Lastname: ". $row["surname"]. "<br>"; 
+}
 } else {
   echo "0 results";
 }
-$conn->close();
-  
+$stmt->close();
+$db->close();
 ?>
 </body>
 </html>
-
