@@ -1,6 +1,7 @@
 <html>
 <body>
-<?php 
+<?php
+ini_set('display_errors','On');
 $file=fopen("mytestfile.txt","r");
 ?>
 </body>

@@ -7,6 +7,6 @@
   Enter filename : <input type="text" name="file"><br>
   <input type="submit" name="File Include"><br>
   </form>
-  </form>
+  files: home, gallery, blog, catalog
   </body>
 </html>

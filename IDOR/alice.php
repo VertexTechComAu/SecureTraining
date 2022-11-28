@@ -1,3 +1,1 @@
-<?php
-echo "<h1> I am Alice's File.<h1>";
-?>
+<h1> I am Alice's File.</h1>
