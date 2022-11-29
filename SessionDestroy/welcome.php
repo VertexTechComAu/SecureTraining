@@ -2,8 +2,13 @@
 // Initialize the session
 session_start();
 
+// redirect user if not logged in
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false) {
+    header("location: login.php");
+}
+
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

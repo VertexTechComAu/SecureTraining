@@ -1,21 +1,12 @@
 <html>
 <body>
 <?php
-$servername = "localhost";
-$username = "brenden";
-$password = "";
-$dbname = "db1";
 
-// Create connection
-$db = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($db->connect_error) {
-  die("Connection failed: " . $db->connect_error);
-}
+// Include config file
+require_once "../config.php";
 
 $user_id =$_GET["id"];
-$sql = $db->query("SELECT * FROM users WHERE id = ".$user_id);
+$sql = $link->query("SELECT * FROM users WHERE id = ".$user_id);
 
 if ($sql->num_rows > 0) {
   //output data of each row

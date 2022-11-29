@@ -1,24 +1,15 @@
 <html>
 <body>
 <?php
-$servername = "localhost";
-$username = "brenden";
-$password = "";
-$dbname = "db1";
 
-// Create connection
-$db = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($db->connect_error) {
-  die("Connection failed: " . $db->connect_error);
-}
+// Include config file
+require_once "../config.php";
 
 $user_id =$_GET["id"];
 
 // prepare and bind
 $sql = "SELECT * FROM users WHERE id = ?";
-$stmt = $db->prepare($sql);
+$stmt = $link->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 
