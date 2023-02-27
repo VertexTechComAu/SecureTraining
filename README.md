@@ -1,6 +1,7 @@
 #Overview
 
 1. Vulnerable Components
+
 1-vulnerable-components/code
 Development starts, we create the project structure. An old, know vulnerable version of the framework is used.
 
@@ -11,6 +12,7 @@ We add a dependency checker tool to alert us of vulnerable components.
 Framework, and other vulnerable dependencies get updated to patched versions, of exceptions are added for not-patched ones.
 
 2. SQL Injection
+
 2.1-sql-injection/code
 A form to add listings is created. Raw SQL is used, concatenating the code with the user provided input.
 
@@ -30,6 +32,7 @@ We use prepared statements to delegate the escaping of the input to the SQL engi
 We use an ORM for extra safety.
 
 3. Weak password storage
+
 3.1-weak-password-storage/code
 We create a signup form to take users in. Password is stored in plain text.
 
@@ -43,6 +46,7 @@ We use a rainbow table to crack the passwords using brute-force.
 We use bcrypt instead.
 
 4. Broken Authentication
+
 4.1-broken-authentication/code
 We add a login form letting the user sign in. The session is the user ID base64 encoded.
 
@@ -53,6 +57,7 @@ We add a random value to the session, still storing the user ID.
 Use a random unique value in the session, properly encrypt it, remove user info from it.
 
 5. Broken Deauthentication
+
 5.1-broken-deauthentication/code
 We let the user log out. On logout, we clean the session cookie, but we don't remove it from server side.
 
@@ -78,7 +83,9 @@ We let the user delete it's account. We don't invalidate the session on user del
 We add a unit test that logs the user in, stores the session value, deletes the account, re-insert the stored value in the cookiejar and re-tries to access an authentication required page.
 
 5.3-broken-deauthentication/fix
+
 6. Cross Site Request Forgery (CSRF)
+
 6-csrf/code
 We add a requirement for authentication to the listing creation form.
 
@@ -89,6 +96,7 @@ We fire BURP/ZAP test for CSRF.
 We add CSRF check
 
 7. Cross-Site Scripting (xss)
+
 7-xss/code
 We add a user profile page, displaying user information. User info is inserted in the page directly, allowing for XSS.
 
@@ -99,6 +107,7 @@ We fire BURP/ZAP test for XSS.
 We pass the values to the html in safer ways defined by the templating language.
 
 8. Broken Access Control
+
 8-broken-access-control/code
 We add the ability to change own listings. We check for user to be authenticated, but not that user is owner of the listing.
 
@@ -109,6 +118,7 @@ We add a unit test that adds 2 listings and 2 users, one owned by each. We test 
 We add access control to check that the user is allowed to edit the listing.
 
 9. XML External Entities (XXE)
+
 9-xxe/code
 We add an API to allow users to mass upload listings trough XML. We don't disallow external entities in the XML parser.
 
@@ -119,6 +129,7 @@ We fire ZAP/BURP to test for XSS.
 We configure XML parsers to be safe.
 
 10. Sensitive Data Exposure
+
 10-sensitive-data-exposure/code
 We add an API endpoint to read the listings posted. We serialize the whole user object, exposing private user data and password hashes.
 
