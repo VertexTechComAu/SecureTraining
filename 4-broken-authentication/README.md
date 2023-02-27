@@ -19,8 +19,9 @@ pip install psycopg2-binary
 
 pip install bcrypt
 
-#or use pip install -r requirements.txt
-
 flask run
 
+#Delete postgres (drop database marketplace) database and create again (create database marketplace) in case there is an error. 
+
+#Head to http://127.0.0.1:5000/user/login
 

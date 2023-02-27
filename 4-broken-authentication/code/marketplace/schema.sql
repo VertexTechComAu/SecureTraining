@@ -1,5 +1,4 @@
 DROP TABLE IF EXISTS listings;
-
 CREATE TABLE listings(
     id   SERIAL                 NOT NULL,
     title VARCHAR(128)          NOT NULL,

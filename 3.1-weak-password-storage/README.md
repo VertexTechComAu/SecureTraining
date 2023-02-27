@@ -1,5 +1,18 @@
 #Ubuntu Setup
 
+cd 3.1
+
+cd code
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+Visit: http://127.0.0.1:5000/user/login
+
+#Testing
 Download worklist from: https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 
 cd ~/3.2-weak-password-storage/test/crackers
